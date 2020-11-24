@@ -1,5 +1,8 @@
 from bs4 import BeautifulSoup
 import urllib.request
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 def get_web_link_value():
     page = urllib.request.urlopen("https://v1-43-0.btclass.net/sitemap")
@@ -7,7 +10,7 @@ def get_web_link_value():
 
     soup = BeautifulSoup(contents, "html.parser")
 
-    print(soup.find_all('a',class_="site-link"))
+    print(soup.find_all('a', class_="site-link"))
 
 
 get_web_link_value()
