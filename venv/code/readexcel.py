@@ -3,7 +3,7 @@ import openpyxl
 
 def readexcel():
     #打开文件
-    rdexcel = openpyxl.load_workbook('/Users/yurkee/Desktop/seo-v1-43-0/sitemap.xlsx')
+    rdexcel = openpyxl.load_workbook('D:\work\seo-v1-43-0\sitemap.xlsx')
 
     #通过名称打开表单，打开默认表格
     mySheet = rdexcel.active
@@ -41,6 +41,6 @@ def readexcel():
                 myTableLink = cell.hyperlink.target[22:]
                 Dict = {myTableValue: myTableLink}
                 myTableDicValue.update(Dict)
-    print(myTableDicValue)
+    # print(myTableDicValue)
+    return myTableDicValue
 
-readexcel()
