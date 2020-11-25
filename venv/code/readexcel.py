@@ -1,7 +1,7 @@
 # coding=utf-8
 import openpyxl
 
-def readexcel():
+def read_Excel():
     #打开文件
     rdexcel = openpyxl.load_workbook('D:\work\seo-v1-43-0\sitemap.xlsx')
 
@@ -43,4 +43,3 @@ def readexcel():
                 myTableDicValue.update(Dict)
     # print(myTableDicValue)
     return myTableDicValue
-

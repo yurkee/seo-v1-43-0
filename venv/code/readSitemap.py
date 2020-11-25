@@ -23,4 +23,5 @@ def get_web_link_value():
         myText = i.string
         Dict = {myText:myLink}
         stDict.update(Dict)
-    print(stDict)
+    # print(stDict)
+    return stDict
