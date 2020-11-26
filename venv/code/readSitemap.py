@@ -2,7 +2,6 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import ssl
-import re
 
 #解决访问https时不受信任SSL证书问题
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -22,11 +21,10 @@ def get_web_link_value():
     #用字典的方式存储，从页面中读取的值和超链接
     stDict = {}
     for i in soup.find_all('a', class_='site-link'):
-        # print(i)
-        # res = re.search(r'\<(.*?)\>', i)
-        # print(res)
-
-        #获取标签<a>中，href的属性值
+    #     print(i)
+    #     res = re.search(r'\<(.*?)\>', i)
+    #     # print(res)
+    #     #获取标签<a>中，href的属性值
         myLink = i['href']
         #获取标签<a>的text
         myText = i.string

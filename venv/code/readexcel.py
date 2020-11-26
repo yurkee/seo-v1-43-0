@@ -12,9 +12,10 @@ def read_Excel():
     # mySheet = rdexcel.get_sheet_by_name('Sheet2')
 
     #直接获取某行某列单元格数据
-    # myCellValues = mySheet.cell(row=59, column=3).hyperlink.target
+    # myCellValues = mySheet.cell(row=1, column=1).hyperlink.target
     # myCellLink = mySheet.cell(row=1, column=1).value
     # print(myCellLink)
+    # print(myCellValues)
 
 
     #获取一个单元格中的文字信息和超链接，组成字典存储
